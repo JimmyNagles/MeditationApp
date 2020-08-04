@@ -6,9 +6,17 @@ const Home = () => {
   return (
     <div>
       <Container>
-        <h3>Content Home</h3>
+        <h3
+          style={{
+            border: "3px black solid",
+            padding: "20px",
+            borderRadius: "10px",
+          }}
+        >
+          Clear your mind and control your thoughts
+        </h3>
       </Container>
-      <Container clase="container ">
+      <Container clase="container  ">
         <Timer></Timer>
       </Container>
     </div>

@@ -14,12 +14,21 @@ const Timer = () => {
     setIsActive(false);
   }
 
+  //checks if timer is on or off
   useEffect(() => {
+    //declares value
     let interval = null;
+
+    //if its on then
     if (isActive) {
+      //
       interval = setInterval(() => {
-        setSeconds((seconds) => seconds + 1);
+        setSeconds((seconds) => seconds - 1);
       }, 1000);
+
+      if (seconds === -1) {
+        reset();
+      }
     } else if (!isActive && seconds !== 0) {
       clearInterval(interval);
     }
@@ -28,7 +37,13 @@ const Timer = () => {
 
   return (
     <div>
-      <h2 className="center">{seconds}s</h2>
+      <h2 className="">{seconds}s</h2>
+      <input
+        className="transparent"
+        type="number"
+        value={seconds}
+        onChange={(e) => setSeconds(e.target.value)}
+      ></input>
       <div className="row">
         <button
           className={`btn ${isActive ? "red" : "green"}`}

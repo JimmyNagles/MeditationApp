@@ -11,13 +11,13 @@ const Nav = () => {
     >
       <ul class="">
         <li>
-          <a href="sass.html">Sass</a>
+          <a href="/">Meditate</a>
         </li>
         <li>
-          <a href="badges.html">Components</a>
+          <a href="/journal">Journal</a>
         </li>
         <li>
-          <a href="collapsible.html">JavaScript</a>
+          <a href="/calendar">Calendar</a>
         </li>
       </ul>
     </nav>
