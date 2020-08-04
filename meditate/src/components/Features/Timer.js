@@ -36,22 +36,29 @@ const Timer = () => {
   }, [isActive, seconds]);
 
   return (
-    <div>
-      <h2 className="">{seconds}s</h2>
+    <div
+      style={{
+        border: "3px solid green ",
+        borderRadius: "10px",
+        padding: "5px 5px 5px",
+      }}
+    >
+      <h2 className="center">{seconds}s</h2>
       <input
-        className="transparent"
+        placeholder="enter seconds"
         type="number"
         value={seconds}
         onChange={(e) => setSeconds(e.target.value)}
       ></input>
-      <div className="row">
+
+      <div className="">
         <button
-          className={`btn ${isActive ? "red" : "green"}`}
+          className={` btn ${isActive ? "red" : "green"}`}
           onClick={toggle}
         >
           {isActive ? "Pause" : "Start"}
         </button>
-        <button className="btn black" onClick={reset}>
+        <button className=" btn black" onClick={reset}>
           Reset
         </button>
       </div>
